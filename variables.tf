@@ -17,4 +17,5 @@ variable "policy_allowed" {
     })
     actions = list(string)
   }))
+  default = {}
 }
