@@ -26,11 +26,15 @@ data "aws_iam_policy_document" "this" {
 
     resources = [ aws_sns_topic.this.arn ]
 
-    condition {
-      test     = "StringEquals"
-      variable = "AWS:SourceAccount"
+    dynamic "condition" {
+      for_each = each.value.prevent_confused_deputy ? [1] : []
 
-      values = [ data.aws_caller_identity.current.account_id ]
+      content {
+        test     = "StringEquals"
+        variable = "AWS:SourceAccount"
+
+        values = [ data.aws_caller_identity.current.account_id ]
+      }
     }
   }
 }

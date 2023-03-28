@@ -16,6 +16,7 @@ variable "policy_allowed" {
       identities = list(string)
     })
     actions = list(string)
+    prevent_confused_deputy = bool
   }))
   default = {}
 }
