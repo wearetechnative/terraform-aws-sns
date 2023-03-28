@@ -50,7 +50,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | KMS key to use for encrypting SNS topics. If not provided then alias/aws/sns is used as a default. | `string` | `"alias/aws/sns"` | no |
+| <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | KMS key to use for encrypting SNS topics. If not provided then alias/aws/sns is used as a default. Set to null to dsiable entire (not recommended!). | `string` | `"alias/aws/sns"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Unique name to assign to SNS topic. | `string` | n/a | yes |
 | <a name="input_policy_allowed"></a> [policy\_allowed](#input\_policy\_allowed) | Required policy for SNS topic. | <pre>map(object({<br>    principal = object({<br>      type = string<br>      identities = list(string)<br>    })<br>    actions = list(string)<br>  }))</pre> | `{}` | no |
 
