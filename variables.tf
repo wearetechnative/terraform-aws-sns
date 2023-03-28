@@ -4,8 +4,9 @@ variable "name" {
 }
 
 variable "kms_key_arn" {
-  description = "KMS key to use for encrypting RDS instances."
+  description = "KMS key to use for encrypting SNS topics. If not provided then alias/aws/sns is used as a default."
   type        = string
+  default = "alias/aws/sns"
 }
 
 variable "policy_allowed" {
@@ -16,7 +17,6 @@ variable "policy_allowed" {
       identities = list(string)
     })
     actions = list(string)
-    prevent_confused_deputy = bool
   }))
   default = {}
 }
