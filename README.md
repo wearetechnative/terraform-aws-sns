@@ -18,7 +18,7 @@ The simplest way to use this module is by defining the least required defaults:
 
 ```hcl
 module "sns_topic_example" {
-   source = "git@github.com:TechNative-B-V/terraform-aws-module-iam-role.git?ref=962c7d04c8f7f2ce229829b2d233bc39caca5ed0"
+   source = "git@github.com:TechNative-B-V/terraform-aws-module-sns.git?ref=962c7d04c8f7f2ce229829b2d233bc39caca5ed0"
 
    name = "sns_topic_example"
    kms_key_arn = module.kms.kms_key_arn
