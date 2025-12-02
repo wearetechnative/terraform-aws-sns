@@ -14,7 +14,7 @@ data "aws_iam_policy_document" "this" {
   for_each = var.policy_allowed
 
   statement {
-    sid = "${each.key}"
+    sid = each.key
     effect = "Allow"
 
     actions = each.value.actions
