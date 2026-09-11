@@ -1,4 +1,4 @@
-# Terraform AWS [SNS]
+# Terraform AWS [SNS] ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-sns/tflint.yaml?branch=main&style=plastic)
 
 This module implements a simple SNS topic with all known AWS best practices enforced.
 
